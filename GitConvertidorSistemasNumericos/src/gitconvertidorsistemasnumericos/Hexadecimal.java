@@ -14,9 +14,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
-        System.out.println("datos del arreglo:");
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(2, potencia));
@@ -39,9 +37,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
-        System.out.println("datos del arreglo:");
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(2, potencia));
@@ -63,8 +59,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(2, potencia));
@@ -168,8 +163,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(8, potencia));
@@ -210,9 +204,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
-        System.out.println("datos del arreglo:");
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(8, potencia));
@@ -252,8 +244,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(8, potencia));
@@ -316,11 +307,9 @@ public class Hexadecimal {
                 case '0':
                     arreglo[i] = 0;
                     break;
-                }
+            }
         }
-        int potencia = 0;
-        int suma = 0;
-        System.out.println("datos del arreglo:");
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(16, potencia));
@@ -385,9 +374,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
-        System.out.println("datos del arreglo:");
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(16, potencia));
@@ -451,9 +438,7 @@ public class Hexadecimal {
                     break;
                 }
         }
-        int potencia = 0;
-        int suma = 0;
-        System.out.println("datos del arreglo:");
+        int potencia = 0, suma = 0;
         for (int j = 0; j < tamanio; j++) {
             potencia = (j - (tamanio-1)) * -1;
             suma += (int) (arreglo[j] * Math.pow(16, potencia));
@@ -461,5 +446,29 @@ public class Hexadecimal {
         Hexadecimal he = new Hexadecimal();
         String retorno = he.decimal_a_otro(suma, 8);
         return retorno;
+    }
+    public boolean validarBase1(String num, int base){
+        boolean bandera = false;
+        if(base == 2){
+            if(num.matches("[0-1]+")){
+                bandera = true;
+            }
+        }
+        if(base == 8){
+            if(num.matches("[0-7]+")){
+                bandera = true;
+            }
+        }
+        if(base == 10){
+            if(num.matches("[0-9]+")){
+                bandera = true;
+            }
+        }
+        if(base == 16){
+            if(num.matches("[a-fA-F0-9]+")){
+                bandera = true;
+            }
+        }
+        return bandera;
     }
 }
